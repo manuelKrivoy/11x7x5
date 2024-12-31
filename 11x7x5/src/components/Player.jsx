@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Player = ({ number, position, role }) => {
+const Player = ({ number, position, role, color }) => {
   const [name, setName] = useState("");
 
   const handleNameChange = (event) => {
@@ -12,7 +12,7 @@ const Player = ({ number, position, role }) => {
     goalkeeper: "bg-yellow-300",
   };
 
-  const playerColor = roleColors[role] || "bg-gray-500";
+  const playerColor = roleColors[role] || color;
 
   return (
     <div className="flex flex-col items-center absolute" style={{ ...position }}>

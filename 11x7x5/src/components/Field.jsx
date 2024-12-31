@@ -2,7 +2,7 @@ import PitchLines from "./PitchLines";
 import Player from "./Player";
 import { useColorContext } from "../context/ColorContext";
 const Field = ({ formation }) => {
-  const { fieldColor } = useColorContext();
+  const { fieldColor, playerColor } = useColorContext();
   return (
     <PitchLines bg={fieldColor}>
       {formation.map((player, index) => (
@@ -14,6 +14,7 @@ const Field = ({ formation }) => {
             left: `${player.x}%`, // También aquí
           }}
           role={player.role}
+          color={playerColor}
         />
       ))}
     </PitchLines>
