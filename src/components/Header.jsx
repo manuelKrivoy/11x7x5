@@ -4,7 +4,7 @@ import { useState } from "react";
 const Header = () => {
   const { changeFieldColor, changePlayerColor } = useColorContext();
   const fieldColors = ["bg-green-600", "bg-blue-600", "bg-purple-600"];
-  const playerColors = ["bg-red-600", "bg-blue-400", "bg-black-200", "bg-pink-600"];
+  const playerColors = ["bg-red-600", "bg-blue-400", "bg-black", "bg-pink-600"];
   const [fieldColorIndex, setFieldColorIndex] = useState(0);
   const [playerColorIndex, setPlayerColorIndex] = useState(0);
 
